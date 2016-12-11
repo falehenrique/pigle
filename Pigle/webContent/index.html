@@ -1,0 +1,99 @@
+<html>
+
+<head>
+
+    <title>Weblet Service</title>
+
+    <link rel="stylesheet" type="text/css" href='css/custom.css'>
+    <link rel="stylesheet" type="text/css" href='css/input-range.css'>
+    <link rel="stylesheet" type="text/css" href='css/tree.css'>
+
+</head>
+
+<body>
+
+<div id="listening">
+    <div class="screen-title">
+        Obrigado
+    </div>
+</div>
+
+<div id="on-start" class="">
+
+    <div class="content">
+
+        <fieldset>
+            <legend>Valor:</legend>
+            <div  id="on-start-amount-value" class="amount"></div>
+        </fieldset>
+
+        <fieldset data-on-transaction-type="else">
+            <legend>Not "Payment"</legend>
+            <div>
+                <span>No discount to apply</span>
+            </div>
+        </fieldset>
+
+        <fieldset data-on-transaction-type="payment">
+            <legend>Valor de investimento:</legend>
+            <div class="discount">
+                <div  id="on-start-amount-value-investiment" class="amount"></div>
+            </div>
+        </fieldset>
+
+        <fieldset data-on-transaction-type="payment">
+            <legend>Valor final:</legend>
+            <div id="discount-value" class="amount"></div>
+        </fieldset>
+
+    </div>
+
+    <div class="button-bar">
+        <button id="on-start-ok-button">Pagar</button>
+    </div>
+
+</div>
+
+<div id="on-end" class="hidden">
+
+    <fieldset>
+        <legend>Resumo da transação</legend>
+        <div  status-id="transaction-completed-approved"    class="hidden">Transação aprovada com sucesso</div>
+        <div  status-id="transaction-completed-declined"    class="hidden">Transaction completed and declined</div>
+        <div  status-id="transaction-terminated-errors"     class="hidden">Transaction terminated (errors)</div>
+        <div  status-id="transaction-aborted"               class="hidden">Transaction aborted</div>
+        <div  status-id="presented-card-not-supported"      class="hidden">Presented card is not supported</div>
+        <div  status-id="no-card-detected"                  class="hidden">No card detected</div>
+        <div  status-id="presented-card-is-blocked"         class="hidden">Presented card is blocked</div>
+        <div  status-id="internal-invalid-object"           class="hidden">An internal object is invalid</div>
+        <div  status-id="not-authorized"                    class="hidden">Access rights are not fulfilled</div>
+        <div  status-id="missing-data"                      class="hidden">An expected data was not found</div>
+        <div  status-id="rng-error"                         class="hidden">Random number generator has encounter an error</div>
+        <div  status-id="lib-interface-error"               class="hidden">Error with the component interface library</div>
+        <div  status-id="memory-error"                      class="hidden">Error with memory management </div>
+        <div  status-id="internal-error"                    class="hidden">Internal sub-component error</div>
+
+        <div  status-id="unknown" class="hidden">Status unknown</div>
+    </fieldset>
+
+    <fieldset id="end-survey">
+        <legend>GOSTARIA DE AVALIAR O SERVIÇO</legend>
+
+        <img class="smiley ok" src="images/smiley-256-ok.png" id="btn-yes">
+        <img class="smiley ko" src="images/smiley-256-ko.png" id="btn-no">
+
+    </fieldset>
+
+</div>
+
+<script type='text/javascript' src='js/libs/tetra/tetra.js'></script>
+<script type='text/javascript' src='js/libs/hex-utils.js'></script>
+<script type='text/javascript' src='js/libs/zepto/zepto.js'></script>
+<script type='text/javascript' src='js/libs/ISO4217.js'></script>
+<script type='text/javascript' src='js/main.js' defer></script>
+<script type='text/javascript' src='js/jquery-3.1.1.min.js' defer></script>
+
+
+</body>
+
+</html>

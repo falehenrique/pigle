@@ -1,0 +1,115 @@
+html, body
+{
+    background-color: #222;
+
+    font-family: Arial;
+
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.hidden
+{
+    display: none;
+}
+
+#listening,
+#on-start,
+#on-end
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    color: #09C;
+}
+
+.screen-title
+{
+    font-size: 30px;
+    height: 30px;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+
+    margin-top: -15px;
+    line-height: 30px;
+
+    text-align: center;
+}
+
+.button-bar
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 50px;
+
+    text-align: center;
+}
+
+.button-bar button
+{
+    width: 100%;
+    height: 48px;
+
+    background-color: #08F;
+    color: #FFF;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.button-bar button:active
+{
+    background-color: #06D;
+}
+
+fieldset
+{
+    margin: 5px 5px 25px 5px;
+    border: 1px solid #AAA;
+    border-radius: 2px;
+    padding: 30px 20px;
+}
+
+fieldset legend
+{
+    background-color: #555;
+    color: #CCC;
+    padding: 4px 10px;
+    border-radius: 2px;
+    width: 180px;
+    border: 1px solid #AAA;
+}
+
+fieldset .amount
+{
+    text-align: right;
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 20px;
+
+    color: #0AF;
+}
+
+
+fieldset .smiley
+{
+    width: 90px;
+    padding: 15px;
+}
+
+fieldset .smiley.ko { float: left; }
+fieldset .smiley.ok { float: right; }
+
+fieldset .smiley:active
+{
+    background-color: #06D;
+}

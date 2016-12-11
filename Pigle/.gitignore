@@ -1,0 +1,4 @@
+/dist
+/Package
+/resources/desc/*.desc
+*.bak
